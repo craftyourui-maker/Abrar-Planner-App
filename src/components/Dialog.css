@@ -1,0 +1,94 @@
+.md-dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: min(560px, calc(100vw - 48px));
+  width: 100%;
+  overflow: visible;
+  color: var(--md-sys-color-on-surface);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+  transition:
+    opacity 150ms var(--md-sys-motion-easing-standard),
+    transform 250ms var(--md-sys-motion-easing-emphasized-decelerate),
+    overlay 250ms allow-discrete,
+    display 250ms allow-discrete;
+}
+
+.md-dialog[open] {
+  opacity: 1;
+  transform: none;
+}
+
+@starting-style {
+  .md-dialog[open] {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+}
+
+.md-dialog::backdrop {
+  background: rgb(0 0 0 / 0);
+  transition:
+    background-color 250ms linear,
+    overlay 250ms allow-discrete,
+    display 250ms allow-discrete;
+}
+.md-dialog[open]::backdrop {
+  background: color-mix(in srgb, var(--md-sys-color-scrim) 32%, transparent);
+}
+@starting-style {
+  .md-dialog[open]::backdrop {
+    background: rgb(0 0 0 / 0);
+  }
+}
+
+.md-dialog__surface {
+  background: var(--md-sys-color-surface-container-high);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--md-sys-elevation-level3);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.md-dialog__icon {
+  align-self: center;
+  color: var(--md-sys-color-secondary);
+}
+
+.md-dialog__headline {
+  margin: 0;
+  font-family: var(--md-sys-typescale-headline-small-font);
+  font-size: var(--md-sys-typescale-headline-small-size);
+  line-height: var(--md-sys-typescale-headline-small-line-height);
+  font-weight: var(--md-sys-typescale-headline-small-weight);
+}
+.md-dialog__headline--centered {
+  text-align: center;
+}
+
+.md-dialog__content {
+  color: var(--md-sys-color-on-surface-variant);
+  font-family: var(--md-sys-typescale-body-medium-font);
+  font-size: var(--md-sys-typescale-body-medium-size);
+  line-height: var(--md-sys-typescale-body-medium-line-height);
+  letter-spacing: var(--md-sys-typescale-body-medium-tracking);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.md-dialog__content p {
+  margin: 0;
+}
+
+.md-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+}

@@ -1,0 +1,62 @@
+.md-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* 48px touch target around the 40px visual */
+.md-icon-button::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+}
+
+.md-icon-button:active:not(:disabled) .md-icon {
+  transform: scale(0.88);
+}
+.md-icon-button .md-icon {
+  transition: transform 120ms var(--md-sys-motion-easing-standard);
+}
+
+.md-icon-button--standard {
+  color: var(--md-sys-color-on-surface-variant);
+}
+.md-icon-button--standard.md-icon-button--selected {
+  color: var(--md-sys-color-primary);
+}
+
+.md-icon-button--filled {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.md-icon-button--tonal {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.md-icon-button--outlined {
+  color: var(--md-sys-color-on-surface-variant);
+  box-shadow: inset 0 0 0 1px var(--md-sys-color-outline-variant);
+}
+.md-icon-button--outlined.md-icon-button--selected {
+  background: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  box-shadow: none;
+}
+
+.md-icon-button:disabled {
+  cursor: default;
+  color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+}
+.md-icon-button:is(.md-icon-button--filled, .md-icon-button--tonal):disabled {
+  background: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, transparent);
+}

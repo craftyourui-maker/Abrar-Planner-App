@@ -1,0 +1,100 @@
+.md-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 16px;
+  border: none;
+  border-radius: var(--md-sys-shape-corner-small);
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  box-shadow: inset 0 0 0 1px var(--md-sys-color-outline-variant);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--md-sys-typescale-label-large-font);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-weight: var(--md-sys-typescale-label-large-weight);
+  transition: box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.md-chip--with-leading {
+  padding-left: 8px;
+}
+.md-chip--with-trailing {
+  padding-right: 4px;
+}
+
+.md-chip--assist .md-icon,
+.md-chip--suggestion .md-icon {
+  color: var(--md-sys-color-primary);
+}
+
+.md-chip--elevated {
+  background: var(--md-sys-color-surface-container-low);
+  box-shadow: var(--md-sys-elevation-level1);
+}
+
+.md-chip--selected {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  box-shadow: none;
+}
+.md-chip--selected.md-chip--elevated {
+  box-shadow: var(--md-sys-elevation-level1);
+}
+.md-chip--selected:hover {
+  box-shadow: var(--md-sys-elevation-level1);
+}
+
+.md-chip--input {
+  cursor: default;
+}
+
+.md-chip__remove {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.md-chip:disabled {
+  cursor: default;
+  color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+}
+
+.md-chip__check {
+  animation: md-chip-check 250ms var(--md-sys-motion-easing-expressive) both;
+}
+@keyframes md-chip-check {
+  from {
+    opacity: 0;
+    transform: scale(0.4) rotate(-20deg);
+  }
+}
+.md-chip:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.md-chip {
+  transition:
+    box-shadow 150ms ease,
+    background-color 200ms var(--md-sys-motion-easing-standard),
+    color 200ms var(--md-sys-motion-easing-standard),
+    transform 120ms var(--md-sys-motion-easing-standard);
+}
+
+/* 48px touch target around the 32px chip */
+.md-chip::after {
+  content: '';
+  position: absolute;
+  inset: -8px 0;
+}

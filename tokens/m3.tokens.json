@@ -1,0 +1,89 @@
+{
+  "$description": "Material 3 Design Kit (Community) tokens, exported from Figma file qxO1L8j3DtIUChNwC9lQzN. Color values are the 'M3' variable collection, one space-separated row per mode, in the order of colorRoles. Run `npm run tokens` after editing to regenerate src/styles/tokens.css.",
+  "colorRoles": "primary on-primary primary-container on-primary-container secondary on-secondary secondary-container on-secondary-container tertiary on-tertiary tertiary-container on-tertiary-container error on-error error-container on-error-container background on-background surface on-surface surface-variant on-surface-variant outline outline-variant surface-tint shadow scrim inverse-surface inverse-on-surface inverse-primary primary-fixed on-primary-fixed primary-fixed-dim on-primary-fixed-variant secondary-fixed on-secondary-fixed secondary-fixed-dim on-secondary-fixed-variant tertiary-fixed on-tertiary-fixed tertiary-fixed-dim on-tertiary-fixed-variant surface-dim surface-bright surface-container-lowest surface-container-low surface-container surface-container-high surface-container-highest",
+  "colorModes": {
+    "Light": "6750a4 ffffff eaddff 4f378a 625b71 ffffff e8def8 4a4459 7d5260 ffffff ffd8e4 633b48 b3261e ffffff f9dedc 852221 fef7ff 1d1b20 fef7ff 1d1b20 e7e0ec 49454f 79747e cac4d0 6750a4 000000 000000 322f35 f5eff7 d0bcff eaddff 21005d d0bcff 4f378b e8def8 1d192b ccc2dc 4a4458 ffd8e4 31111d efb8c8 633b48 ded8e1 fef7ff ffffff f7f2fa f3edf7 ece6f0 e6e0e9",
+    "Light High Contrast": "27174e ffffff 493971 ffffff 27174e ffffff 493971 ffffff 420e24 ffffff 6b2f45 ffffff 440f0e ffffff 6e2f2c ffffff fdf7ff 1d1b20 fdf7ff 000000 e7e0eb 25232b 45414a 45414a 65558f 000000 000000 322f35 ffffff f1e8ff 493971 ffffff 322359 ffffff 493971 ffffff 322359 ffffff 6b2f45 ffffff 50192f ffffff ded8e0 fdf7ff ffffff f8f2fa f2ecf4 ece6ee e6e0e9",
+    "Light Medium Contrast": "493971 ffffff 7b6ba7 ffffff 493971 ffffff 7c6ba7 ffffff 6b2f45 ffffff a55f77 ffffff 6e2f2c ffffff aa5f5a ffffff fdf7ff 1d1b20 fdf7ff 1d1b20 e7e0eb 45414a 615d67 7d7983 65558f 000000 000000 322f35 f5eff7 cfbdfe 7b6ba7 ffffff 62538c ffffff 7c6ba7 ffffff 62538c ffffff a55f77 ffffff 89475e ffffff ded8e0 fdf7ff ffffff f8f2fa f2ecf4 ece6ee e6e0e9",
+    "Dark": "d0bcff 381e72 4f378b eaddff ccc2dc 332d41 4a4458 e8def8 efb8c8 492532 633b48 ffd8e4 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 141218 e6e0e9 49454f cac4d0 938f99 49454f d0bcff 000000 000000 e6e0e9 322f35 6750a4 eaddff 21005d d0bcff 4f378b e8def8 1d192b ccc2dc 4a4458 ffd8e4 31111d efb8c8 633b48 141218 3b383e 0f0d13 1d1b20 211f26 2b2930 36343b",
+    "Dark High Contrast": "fff9ff 000000 d3c1ff 000000 fff9ff 000000 d3c1ff 000000 fff9f9 000000 ffb7cd 000000 fff9f9 000000 ffb9b3 000000 141218 e6e0e9 141218 ffffff 49454e fff9ff cec8d4 cec8d4 cfbdfe 000000 000000 e6e0e9 000000 2f2056 ede2ff 000000 d3c1ff 1b0942 ede2ff 000000 d3c1ff 1b0942 ffdfe7 000000 ffb7cd 330218 141218 3b383e 0f0d13 1d1b20 211f24 2b292f 36343a",
+    "Dark Medium Contrast": "d3c1ff 1b0942 9887c5 000000 d3c1ff 1b0942 9887c5 000000 ffb7cd 330218 c57b93 000000 ffb9b3 330405 cc7b74 000000 141218 e6e0e9 141218 fff9ff 49454e cec8d4 a6a1ab 86818b cfbdfe 000000 000000 e6e0e9 2b292f 4e3f77 e9ddff 16033d cfbdfe 3c2d63 e9ddff 16033d cfbdfe 3c2d63 ffd9e3 2b0013 ffb0c9 5b2238 141218 3b383e 0f0d13 1d1b20 211f24 2b292f 36343a",
+    "Monochrome LT": "000000 e2e2e2 3b3b3b ffffff 5f5e5f ffffff d4d4d4 1b1b1b 3a3c3c e2e2e2 747474 ffffff b3261e ffffff f9dedc 410e0b fdf7ff 1d1b20 f9f9f9 1b1b1b e2e2e2 474747 777777 c6c6c6 9f9f9f 000000 000000 303030 f1f1f1 474747 5e5e5e ffffff 474747 e3e2e2 c6c6c6 1b1c1c ababab 3b3b3c 5e5e5e ffffff 474747 e3e2e2 dadada f9f9f9 ffffff f3f3f3 eeeeee e8e8e8 e2e2e2",
+    "Monochrome DT": "ffffff 1a1c1c d4d4d4 000000 c6c6c6 1a1c1c 474747 e2e2e2 e2e2e2 1a1c1c 919191 000000 f2b8b5 601410 8c1d18 f2b8b5 141218 e6e0e9 131313 e2e2e2 474747 c6c6c6 919191 474747 e8e8e8 000000 000000 e2e2e2 303030 000000 5e5e5e ffffff 474747 e3e2e2 c6c6c6 1b1c1c ababab 3b3b3c 5e5e5e ffffff 474747 e3e2e2 131313 393939 0e0e0e 1b1b1b 1f1f1f 2a2a2a 353535",
+    "Pink LT": "8a4b68 ffffff feb0d1 6e334f 735762 ffffff fbd6e3 593f4b 7f5639 ffffff fec6a2 633e24 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fff8f8 21191c eedfe3 504348 827378 d4c2c7 8a4b68 000000 000000 30282b faeaee feb0d1 feb0d1 390723 e095b5 6e334f fbd6e3 2a151f e1bdca 593f4b fec6a2 301401 e0ab88 633e24 e5d6da fff8f8 ffffff fff0f4 faeaee f4e4e8 eedfe3",
+    "Pink DT": "feb0d1 531d39 6d3350 ffd8e6 e1bdca 412a34 59404a fed9e6 f2bb98 49280f 633e23 ffdcc6 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 191114 eedfe3 3b3235 d4c2c7 9d8c92 504348 feb0d1 000000 000000 eedfe3 3b3235 8a4b68 feb0d1 390723 e095b5 6e334f fbd6e3 2a151f e1bdca 593f4b fec6a2 301401 e0ab88 633e24 191114 40373a 130c0f 21191c 251d20 30282b 3b3235",
+    "Rose LT": "8f4a56 ffffff fda6b3 72323f 76575b ffffff ffd5da 5c3f43 7a5932 ffffff ffd2a1 5c4122 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fff8f7 22191a f0dedf 524345 847374 d7c2c3 8f4a56 000000 000000 312829 fbeaeb ffb2bd fda6b3 3b0715 de8c99 72323f ffd5da 2c1519 e5bdc1 5c3f43 ffd2a1 2b1700 e1b788 5c4122 e7d6d7 fff8f7 ffffff fff0f1 fbeaeb f6e4e5 f0dedf",
+    "Rose DT": "ffb2bd 561d29 72333f ffd9dd e5bdc1 43292d 5c3f43 ffd9dd eabf8f 452b07 5e411c ffddb9 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 191112 f0dedf 3d3233 d7c2c3 9f8c8e 524345 ffb2bd 000000 000000 f0dedf 3d3233 8f4a56 fda6b3 3b0715 de8c99 72323f ffd5da 2c1519 e5bdc1 5c3f43 ffd2a1 2b1700 e1b788 5c4122 191112 413738 140c0d 22191a 261d1e 312829 3d3233",
+    "Red LT": "914b43 ffffff fda499 73332c 785753 ffffff ffd3cd 5d3f3b 715c2f ffffff fadca3 544522 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fff8f7 231918 f1dedc 534341 857370 d8c2be 914b43 000000 000000 322826 fceae7 ffa79b fda499 3b0906 de8a80 73332c ffd3cd 2c1512 e1b7b2 5d3f3b fadca3 261a00 dfc38c 544522 e8d6d4 fff8f7 ffffff fff0ee fceae7 f7e4e2 f1dedc",
+    "Red DT": "ffa79b 561e18 73342c ffdad5 e7bdb7 442926 5d3f3b ffdad5 dfc38c 3f2e04 574419 fcdfa6 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 1a1110 f1dedc 3d3231 d8c2be a08c8a 534341 ffa79b 000000 000000 f1dedc 3d3231 914b43 fda499 3b0906 de8a80 73332c ffd3cd 2c1512 e1b7b2 5d3f3b fadca3 261a00 dfc38c 544522 1a1110 423735 140c0b 231918 271d1c 322826 3d3231",
+    "Orange LT": "8d4f28 ffffff ffae7f 673c22 765948 ffffff fdd5bf 5c4131 636133 ffffff e6e2a9 494923 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fff8f5 221a15 f0dfd7 52443c 85746b d7c2b8 8d4f28 000000 000000 312823 fceae2 ffb68c ffae7f 321200 e09468 673c22 fdd5bf 2b1609 dfb9a4 5c4131 e6e2a9 1d1d00 ccc992 494923 e7d7cf fff8f5 ffffff fff1eb fceae2 f6e5dd f0dfd7",
+    "Orange DT": "ffb68c 532200 6f3812 ffdbc9 e5bfaa 432b1d 5c4131 ffdbc9 cdc991 333208 4a481d e9e5ab f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 1a120d f0dfd7 3d332d d7c2b8 7f7667 52443c ffb68c 000000 000000 f0dfd7 3d332d 8d4f28 ffae7f 321200 e09468 673c22 fdd5bf 2b1609 dfb9a4 5c4131 e6e2a9 1d1d00 ccc992 494923 1a120d 413732 140d08 221a15 271e19 312823 3d332d",
+    "Yellow LT": "795a0c ffffff ffd57d 544522 6c5d40 ffffff f2ddb8 52452a 4b6647 ffffff c9e8c1 344d30 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fff8f2 1f1b13 ebe1d4 4d4639 7f7667 d0c5b4 795a0c 000000 000000 2e2921 f7ecdf e9c16c ffd57d 261a00 e1b964 544522 f2ddb8 241a04 d8c4a1 52452a c9e8c1 082008 b0cfa9 344d30 e2d9cc fff8f2 ffffff fcf2e5 f7ecdf f1e7d9 ebe1d4",
+    "Yellow DT": "e9c16c 3f2e00 6d5000 fff7ef d8c4a0 3b2f15 52452a f5e0bb b0cfa9 1d361c 334d31 ccebc4 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 17130b ebe1d4 39342b d0c5b4 999080 4d4639 e9c16c 000000 000000 ebe1d4 39342b 795a0c ffd57d 261a00 e1b964 544522 f2ddb8 241a04 d8c4a1 52452a c9e8c1 082008 b0cfa9 344d30 17130b 3e382f 110e07 1f1b13 241f17 2e2921 39342b",
+    "Chartreuse LT": "5c641e ffffff dde692 454a23 5e6145 ffffff e3e5c1 46492f 3c675b ffffff bbe9da 2e4d44 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fcfaed 1b1c14 e5e3d6 47483b 78786a c8c7b7 5c641e 000000 000000 2a2b22 f0eee1 c3cd7c dde692 1a1e00 c1ca79 454a23 e3e5c1 1a1d07 c7c9a6 46492f bbe9da 002019 a3d0c1 2e4d44 dcdace fcfaed ffffff f6f4e7 f0eee1 eae9dc e5e3d6",
+    "Chartreuse DT": "c3cd7c 2d3400 434b06 dfe995 c6c9a7 2f321a 46492f e3e5c2 a2d0c2 06372d 224e44 beecdd f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 13140d e5e3d6 35352d c8c7b7 919282 47483b c3cd7c 000000 000000 e5e3d6 335533 5c641e dde692 1a1e00 c1ca79 454a23 e3e5c1 1a1d07 c7c9a6 46492f bbe9da 002019 a3d0c1 2e4d44 13140d 393a31 0e0f08 1b1c14 202018 2a2b22 35352d",
+    "Green LT": "376a3e ffffff b7f1b9 2d4e30 526451 ffffff d1e5ce 3a4b3a 3a666d ffffff bae8f0 2f4b51 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 f7fbf2 181d18 e0e4db 424940 717970 c1c9be 376a3e 000000 000000 272b26 ebefe7 9cd49f b7f1b9 002108 9cd49e 2d4e30 d1e5ce 0f1f11 b8ccb6 3a4b3a bae8f0 001f24 a1ced6 2f4b51 d7dbd3 f7fbf2 ffffff f1f5ec ebefe7 e5e9e1 e0e4db",
+    "Green DT": "9cd49f 003913 1d5128 b7f1b9 b8ccb5 243425 3a4b3a d4e8d1 a1ced6 00363d 1f4d54 bdeaf3 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 101510 e0e4db 313630 c1c9be 919282 424940 9cd49f 000000 000000 e0e4db 313630 376a3e b7f1b9 002108 9cd49e 2d4e30 d1e5ce 0f1f11 b8ccb6 3a4b3a bae8f0 001f24 a1ced6 2f4b51 101510 363a35 0b0f0b 181d18 1c211c 272b26 313630",
+    "Teal LT": "006b60 ffffff 9ef2e3 2e4c47 4b645f ffffff cae6df 334b47 45627a ffffff c5e3ff 30495d b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 f4fbf8 171d1b dde4e1 3f4946 6f7976 bec9c5 006b60 000000 000000 252b2a e9efec 82d5c7 9ef2e3 00201c 82d5c7 2e4c47 cae6df 06201c b1ccc6 334b47 c5e3ff 001e30 accae5 30495d d5dbd9 f4fbf8 ffffff eff5f2 e9efec e3eae7 dde4e1",
+    "Teal DT": "82d5c7 003731 006b5f ffffff b1ccc6 1c3530 334b47 cce8e2 accae5 143349 2d4a60 cbe6ff f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 0e1513 dde4e1 303634 bec9c5 88938f 3f4946 82d5c7 000000 000000 dde4e1 303634 006b60 9ef2e3 00201c 82d5c7 2e4c47 cae6df 06201c b1ccc6 334b47 c5e3ff 001e30 accae5 30495d 0e1513 343b39 090f0e 171d1b 1a211f 252b2a 303634",
+    "Cyan LT": "01687d ffffff 9ae5fd 2f4b54 4c636a ffffff cee7f0 344a52 595d7e ffffff d4d7ff 414465 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 f5fafd 171c1e dee3e6 40484b 70787c bfc8cc 01687d 000000 000000 252b2d eaeff1 86d1ea 9ae5fd 001f27 7ec9e0 2f4b54 cee7f0 061e25 b2cbd3 344a52 d4d7ff 151937 b8bce2 414465 d6dbdd f5fafd ffffff eff4f7 eaeff1 e4e9eb dee3e6",
+    "Cyan DT": "86d1ea 003642 00677c ffffff b3cad3 1d343b 344a52 cee6f0 c1c4eb 2a2e4d 414465 dfe0ff f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 0f1416 dee3e6 303638 bfc8cc 8a9295 40484b 86d1ea 000000 000000 dee3e6 303638 01687d 9ae5fd 001f27 7ec9e0 2f4b54 cee7f0 061e25 b2cbd3 344a52 d4d7ff 151937 b8bce2 414465 0f1416 343a3c 090f11 171c1e 1b2022 252b2d 303638",
+    "Blue LT": "485e92 ffffff adc3fe 324574 585f72 ffffff d9dff6 404659 735573 ffffff fbd4f7 593d5a b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 faf8ff 1a1b21 e2e2e9 44464f 757780 c5c6d0 485e92 000000 000000 282a2f eeedf4 b0c6ff adc3fe 001946 92a8e1 324574 d9dff6 151b2c c0c6dc 404659 fbd4f7 2a122c e0bbdd 593d5a dad9e0 faf8ff ffffff f4f3fa eeedf4 e8e7ef e2e2e9",
+    "Blue DT": "b0c6ff 152e60 2e4578 d9e2ff c0c6dc 293042 404659 dce2f9 e0bbdd 412742 593d5a fdd7fa f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 121318 e2e2e9 33343a c5c6d0 8f909a 44464f b0c6ff 000000 000000 e2e2e9 33343a 485e92 adc3fe 001946 92a8e1 324574 d9dff6 151b2c c0c6dc 404659 fbd4f7 2a122c e0bbdd 593d5a 121318 38393f 0c0e13 1a1b21 1e1f25 282a2f 33343a",
+    "Indigo LT": "5b5992 ffffff c1bdfe 434078 5f5d72 ffffff e0ddf6 454559 7b5368 ffffff ffcce5 603c4f b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fcf8ff 1c1b21 e5e1e9 47464f 787680 c8c5d0 5b5992 000000 000000 2a292f f0ecf4 c5c0ff c1bdfe 17134a a6a2e1 434078 e0ddf6 1a1a2c c7c4dc 454559 ffcce5 2f1123 e1b1c9 603c4f dcd8e0 fcf8ff ffffff f6f2fa f0ecf4 eae7ef e5e1e9",
+    "Indigo DT": "c5c0ff 2d2960 444078 e3dfff c7c4dc 302e42 464559 e4dff9 ebb8d0 472538 603b4f ffd8e9 f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 131318 e5e1e9 35343a c8c5d0 918f9a 47464f c5c0ff 000000 000000 ede6ee 35343a 5b5992 c1bdfe 17134a a6a2e1 434078 e0ddf6 1a1a2c c7c4dc 454559 ffcce5 2f1123 e1b1c9 603c4f 131318 39383f 0e0e13 1c1b21 201f25 2a292f 35343a",
+    "Purple LT": "6b548d ffffff d9bdfe 523c72 655b70 ffffff ebddf7 4c4357 80525c ffffff fdc2cd 653a44 b3261e ffffff f9dedc 8c1d18 fdf7ff 1d1b20 fef7ff 1d1a20 e7e0e8 4a454e 7a757f cbc4cf 6b548d 000000 000000 2c292f f3ecf4 d6bbfb d9bdfe 250e44 bda2e1 523c72 ebddf7 20182a cfc1db 4c4357 fdc2cd 321019 dfa7b2 653a44 dfd8e0 fef7ff ffffff f9f1f9 f3ecf4 ede6ee e7e0e8",
+    "Purple DT": "d6bbfb 3b255a 523c73 eddcff cec2da 352d40 4c4357 ebddf7 f2b7c2 4b252d 653b43 ffd9df f2b8b5 601410 8c1d18 f9dedc 141218 e6e0e9 151218 e7e0e8 37333a cbc4cf 958e99 4a454e d6bbfb 000000 000000 e7e0e8 37333a 6b548d d9bdfe 250e44 bda2e1 523c72 ebddf7 20182a cfc1db 4c4357 fdc2cd 321019 dfa7b2 653a44 151218 3b383e 100d12 1d1a20 211e24 2c292f 37333a"
+  },
+  "font": {
+    "brand": "Roboto",
+    "plain": "Roboto",
+    "weight": { "regular": 400, "medium": 500, "bold": 600 }
+  },
+  "typescale": {
+    "display-large":   { "font": "brand", "size": 57, "lineHeight": 64, "tracking": -0.25, "weight": "regular", "emphasized": "medium" },
+    "display-medium":  { "font": "brand", "size": 45, "lineHeight": 52, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "display-small":   { "font": "brand", "size": 36, "lineHeight": 44, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "headline-large":  { "font": "brand", "size": 32, "lineHeight": 40, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "headline-medium": { "font": "brand", "size": 28, "lineHeight": 36, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "headline-small":  { "font": "brand", "size": 24, "lineHeight": 32, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "title-large":     { "font": "brand", "size": 22, "lineHeight": 28, "tracking": 0,     "weight": "regular", "emphasized": "medium" },
+    "title-medium":    { "font": "plain", "size": 16, "lineHeight": 24, "tracking": 0.15,  "weight": "medium",  "emphasized": "bold" },
+    "title-small":     { "font": "plain", "size": 14, "lineHeight": 20, "tracking": 0.1,   "weight": "medium",  "emphasized": "bold" },
+    "body-large":      { "font": "plain", "size": 16, "lineHeight": 24, "tracking": 0.5,   "weight": "regular", "emphasized": "medium" },
+    "body-medium":     { "font": "plain", "size": 14, "lineHeight": 20, "tracking": 0.25,  "weight": "regular", "emphasized": "medium" },
+    "body-small":      { "font": "plain", "size": 12, "lineHeight": 16, "tracking": 0.4,   "weight": "regular", "emphasized": "medium" },
+    "label-large":     { "font": "plain", "size": 14, "lineHeight": 20, "tracking": 0.1,   "weight": "medium",  "emphasized": "bold" },
+    "label-medium":    { "font": "plain", "size": 12, "lineHeight": 16, "tracking": 0.5,   "weight": "medium",  "emphasized": "bold" },
+    "label-small":     { "font": "plain", "size": 11, "lineHeight": 16, "tracking": 0.5,   "weight": "medium",  "emphasized": "bold" }
+  },
+  "shape": {
+    "none": 0,
+    "extra-small": 4,
+    "small": 8,
+    "medium": 12,
+    "large": 16,
+    "large-increased": 20,
+    "extra-large": 28,
+    "extra-large-increased": 32,
+    "extra-extra-large": 48,
+    "full": 1000
+  },
+  "elevation": {
+    "light": [
+      "0 1px 3px 1px rgb(0 0 0 / .15), 0 1px 2px 0 rgb(0 0 0 / .3)",
+      "0 2px 6px 2px rgb(0 0 0 / .15), 0 1px 2px 0 rgb(0 0 0 / .3)",
+      "0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15)",
+      "0 2px 3px 0 rgb(0 0 0 / .3), 0 6px 10px 4px rgb(0 0 0 / .15)",
+      "0 4px 4px 0 rgb(0 0 0 / .3), 0 8px 12px 6px rgb(0 0 0 / .15)"
+    ],
+    "dark": [
+      "0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15)",
+      "0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15)",
+      "0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15)",
+      "0 2px 3px 0 rgb(0 0 0 / .3), 0 6px 10px 4px rgb(0 0 0 / .15)",
+      "0 4px 4px 0 rgb(0 0 0 / .3), 0 8px 12px 6px rgb(0 0 0 / .15)"
+    ]
+  },
+  "stateLayerOpacity": { "hover": 0.08, "focus": 0.1, "pressed": 0.1, "dragged": 0.16 }
+}

@@ -1,0 +1,35 @@
+.md-badge-anchor {
+  position: relative;
+  display: inline-flex;
+}
+
+.md-badge {
+  position: absolute;
+  background: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  border-radius: var(--md-sys-shape-corner-full);
+  pointer-events: none;
+}
+
+.md-badge--small {
+  width: 6px;
+  height: 6px;
+  top: 6px;
+  right: 6px;
+}
+
+.md-badge--large {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  top: 2px;
+  left: calc(50% + 4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--md-sys-typescale-label-small-font);
+  font-size: var(--md-sys-typescale-label-small-size);
+  line-height: var(--md-sys-typescale-label-small-line-height);
+  letter-spacing: var(--md-sys-typescale-label-small-tracking);
+  font-weight: var(--md-sys-typescale-label-small-weight);
+}

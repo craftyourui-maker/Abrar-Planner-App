@@ -1,0 +1,87 @@
+.md-top-app-bar {
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: 0 4px;
+  transition: background-color 200ms linear;
+}
+
+.md-top-app-bar--scrolled {
+  background: var(--md-sys-color-surface-container);
+}
+
+.md-top-app-bar__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 64px;
+}
+
+.md-top-app-bar__leading,
+.md-top-app-bar__actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.md-top-app-bar__leading {
+  padding-left: 4px;
+}
+
+.md-top-app-bar__actions {
+  margin-left: auto;
+  padding-right: 4px;
+}
+
+.md-top-app-bar__text {
+  min-width: 0;
+  flex: 1;
+  padding-left: 4px;
+}
+
+.md-top-app-bar__headline {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--md-sys-typescale-title-large-font);
+  font-size: var(--md-sys-typescale-title-large-size);
+  line-height: var(--md-sys-typescale-title-large-line-height);
+  letter-spacing: var(--md-sys-typescale-title-large-tracking);
+  font-weight: var(--md-sys-typescale-title-large-weight);
+}
+
+.md-top-app-bar__subtitle {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-family: var(--md-sys-typescale-label-medium-font);
+  font-size: var(--md-sys-typescale-label-medium-size);
+  line-height: var(--md-sys-typescale-label-medium-line-height);
+  letter-spacing: var(--md-sys-typescale-label-medium-tracking);
+  font-weight: var(--md-sys-typescale-label-medium-weight);
+}
+
+.md-top-app-bar__text--expanded {
+  padding: 0 12px 12px;
+}
+
+.md-top-app-bar--medium .md-top-app-bar__headline {
+  white-space: normal;
+  font-family: var(--md-sys-typescale-headline-medium-font);
+  font-size: var(--md-sys-typescale-headline-medium-size);
+  line-height: var(--md-sys-typescale-headline-medium-line-height);
+  letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+  font-weight: var(--md-sys-typescale-headline-medium-weight);
+}
+
+.md-top-app-bar--large .md-top-app-bar__headline {
+  white-space: normal;
+  font-family: var(--md-sys-typescale-display-small-font);
+  font-size: var(--md-sys-typescale-display-small-size);
+  line-height: var(--md-sys-typescale-display-small-line-height);
+  letter-spacing: var(--md-sys-typescale-display-small-tracking);
+  font-weight: var(--md-sys-typescale-display-small-weight);
+}
+
+.md-top-app-bar--large .md-top-app-bar__text--expanded {
+  padding-bottom: 28px;
+}

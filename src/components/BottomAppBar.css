@@ -1,0 +1,53 @@
+.md-bottom-app-bar {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 16px 0 4px;
+  background: var(--md-sys-color-surface-container);
+}
+
+.md-bottom-app-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  padding-left: 4px;
+}
+
+.md-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: var(--md-sys-shape-corner-large);
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  box-shadow: var(--md-sys-elevation-level3);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: box-shadow 150ms ease;
+}
+
+.md-fab:hover {
+  box-shadow: var(--md-sys-elevation-level4);
+}
+
+.md-bottom-app-bar .md-fab {
+  box-shadow: none;
+}
+
+.md-fab--extended {
+  width: auto;
+  padding: 0 20px 0 16px;
+}
+
+.md-fab__label {
+  font-family: var(--md-sys-typescale-label-large-font);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-weight: var(--md-sys-typescale-label-large-weight);
+}

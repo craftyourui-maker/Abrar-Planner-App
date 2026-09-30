@@ -1,0 +1,174 @@
+.md-text-field {
+  --md-tf-accent: var(--md-sys-color-primary);
+  --md-tf-outline: var(--md-sys-color-outline);
+  --md-tf-label: var(--md-sys-color-on-surface-variant);
+  --md-tf-pad-start: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.md-text-field--error {
+  --md-tf-accent: var(--md-sys-color-error);
+  --md-tf-outline: var(--md-sys-color-error);
+  --md-tf-label: var(--md-sys-color-error);
+}
+
+.md-text-field--with-leading {
+  --md-tf-pad-start: 52px;
+}
+
+.md-text-field__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+}
+
+.md-text-field__input {
+  flex: 1;
+  min-width: 0;
+  height: 56px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 16px 0 var(--md-tf-pad-start);
+  color: var(--md-sys-color-on-surface);
+  caret-color: var(--md-tf-accent);
+  font-family: var(--md-sys-typescale-body-large-font);
+  font-size: var(--md-sys-typescale-body-large-size);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+  letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  font-weight: var(--md-sys-typescale-body-large-weight);
+}
+
+.md-text-field__label {
+  position: absolute;
+  left: var(--md-tf-pad-start);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-tf-label);
+  pointer-events: none;
+  transform-origin: left center;
+  transition: all 150ms cubic-bezier(0.2, 0, 0, 1);
+  font-family: var(--md-sys-typescale-body-large-font);
+  font-size: var(--md-sys-typescale-body-large-size);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+  letter-spacing: var(--md-sys-typescale-body-large-tracking);
+}
+
+.md-text-field__leading {
+  position: absolute;
+  left: 12px;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-text-field__trailing {
+  display: inline-flex;
+  padding-right: 4px;
+  color: var(--md-sys-color-on-surface-variant);
+  position: relative;
+  z-index: 1;
+}
+
+.md-text-field__supporting {
+  margin: 4px 16px 0;
+  color: var(--md-tf-label);
+  font-family: var(--md-sys-typescale-body-small-font);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  letter-spacing: var(--md-sys-typescale-body-small-tracking);
+}
+.md-text-field:not(.md-text-field--error) .md-text-field__supporting {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* ---------- outlined ---------- */
+.md-text-field__outline {
+  position: absolute;
+  inset: -5px 0 0;
+  margin: 0;
+  padding: 0 8px 0 12px;
+  border: 1px solid var(--md-tf-outline);
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  pointer-events: none;
+  min-width: 0;
+}
+
+.md-text-field__outline legend {
+  float: none;
+  width: auto;
+  max-width: 0.01px;
+  padding: 0;
+  height: 11px;
+  visibility: hidden;
+  white-space: nowrap;
+  font-family: var(--md-sys-typescale-body-small-font);
+  font-size: var(--md-sys-typescale-body-small-size);
+  letter-spacing: var(--md-sys-typescale-body-small-tracking);
+  transition: max-width 50ms linear;
+}
+.md-text-field__outline legend span {
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.md-text-field--outlined .md-text-field__input:is(:focus, :not(:placeholder-shown)) ~ .md-text-field__label {
+  top: 0;
+  left: 16px;
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  letter-spacing: var(--md-sys-typescale-body-small-tracking);
+}
+.md-text-field--outlined .md-text-field__input:is(:focus, :not(:placeholder-shown)) ~ .md-text-field__outline legend {
+  max-width: 100%;
+  transition: max-width 100ms linear 50ms;
+}
+
+.md-text-field--outlined .md-text-field__container:hover .md-text-field__outline {
+  border-color: var(--md-sys-color-on-surface);
+}
+.md-text-field--outlined.md-text-field--error .md-text-field__container:hover .md-text-field__outline {
+  border-color: var(--md-sys-color-on-error-container);
+}
+.md-text-field--outlined .md-text-field__input:focus ~ .md-text-field__outline {
+  border: 2px solid var(--md-tf-accent);
+  padding-left: 11px;
+}
+.md-text-field__input:focus ~ .md-text-field__label {
+  color: var(--md-tf-accent);
+}
+
+/* ---------- filled ---------- */
+.md-text-field--filled .md-text-field__container {
+  background: var(--md-sys-color-surface-container-highest);
+  border-radius: var(--md-sys-shape-corner-extra-small) var(--md-sys-shape-corner-extra-small) 0 0;
+  box-shadow: inset 0 -1px 0 var(--md-sys-color-on-surface-variant);
+}
+.md-text-field--filled.md-text-field--error .md-text-field__container {
+  box-shadow: inset 0 -1px 0 var(--md-sys-color-error);
+}
+.md-text-field--filled .md-text-field__container:focus-within {
+  box-shadow: inset 0 -2px 0 var(--md-tf-accent);
+}
+.md-text-field--filled .md-text-field__input {
+  padding-top: 18px;
+}
+.md-text-field--filled .md-text-field__input:is(:focus, :not(:placeholder-shown)) ~ .md-text-field__label {
+  top: 16px;
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+  letter-spacing: var(--md-sys-typescale-body-small-tracking);
+}
+
+.md-text-field:has(:disabled) {
+  opacity: 0.38;
+}
+
+/* A real placeholder only shows once the label has floated out of its way. */
+.md-text-field__input:not(:focus)::placeholder {
+  color: transparent;
+}
+.md-text-field__input::placeholder {
+  color: var(--md-sys-color-on-surface-variant);
+}

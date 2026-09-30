@@ -1,0 +1,69 @@
+.md-slider {
+  position: relative;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  --md-slider-handle-x: calc(var(--md-slider-fraction) * (100% - 4px));
+}
+
+.md-slider__track {
+  pointer-events: none;
+}
+
+.md-slider__handle {
+  position: absolute;
+  left: var(--md-slider-handle-x);
+  top: 0;
+  width: 4px;
+  height: 44px;
+  border-radius: 2px;
+  background: var(--md-sys-color-primary);
+  pointer-events: none;
+  transition: transform 120ms var(--md-sys-motion-easing-standard);
+}
+
+.md-slider__bubble {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  min-width: 48px;
+  padding: 12px 16px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  text-align: center;
+  font-family: var(--md-sys-typescale-label-large-font);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: 1;
+  font-weight: var(--md-sys-typescale-label-large-weight);
+  opacity: 0;
+  transform: translate(-50%, 6px) scale(0.8);
+  transition:
+    opacity 150ms var(--md-sys-motion-easing-standard),
+    transform 200ms var(--md-sys-motion-easing-expressive);
+}
+
+.md-slider:has(.md-slider__input:active) .md-slider__bubble,
+.md-slider:has(.md-slider__input:focus-visible) .md-slider__bubble {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.md-slider:has(.md-slider__input:active) .md-slider__handle {
+  transform: scaleX(0.5);
+}
+
+.md-slider:has(.md-slider__input:focus-visible) .md-slider__handle {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+.md-slider__input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  touch-action: pan-y;
+}

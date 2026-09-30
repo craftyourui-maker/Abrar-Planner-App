@@ -1,0 +1,45 @@
+/* M3 interaction states: a translucent layer in the content color sits over the
+   container. Opacities come from the state tokens (hover 8%, focus/pressed 10%). */
+.md-state {
+  position: relative;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.md-state::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--md-state-color, currentColor);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 150ms linear;
+}
+
+.md-state:hover:not(:disabled, [aria-disabled='true'])::before {
+  opacity: var(--md-sys-state-hover-opacity);
+}
+
+.md-state:focus-visible::before {
+  opacity: var(--md-sys-state-focus-opacity);
+}
+
+.md-state:active:not(:disabled, [aria-disabled='true'])::before {
+  opacity: var(--md-sys-state-pressed-opacity);
+}
+
+.md-focus-ring:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+.md-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

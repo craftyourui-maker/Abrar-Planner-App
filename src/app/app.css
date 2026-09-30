@@ -1,0 +1,469 @@
+/* ---------- Stage & device ----------
+   Daymark is a phone app. On a phone it fills the screen; on larger screens it sits
+   in a device-sized column so the layout stays true to the 412dp design. */
+.dm-stage {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--md-sys-color-surface-container);
+}
+
+.dm-device {
+  position: relative;
+  width: 412px;
+  height: min(915px, calc(100dvh - 48px));
+  display: flex;
+  flex-direction: column;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  box-shadow: 0 0 0 1px var(--md-sys-color-outline-variant), var(--md-sys-elevation-level3);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+@media (max-width: 480px), (max-height: 640px) {
+  .dm-stage {
+    align-items: stretch;
+  }
+  .dm-device {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.dm-screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--md-sys-color-surface);
+}
+
+.dm-screen-frame {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dm-app-bar {
+  position: relative;
+  z-index: 2;
+}
+
+.dm-app-bar--root .md-top-app-bar__text {
+  padding-left: 12px;
+}
+
+.dm-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+}
+
+.dm-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 24px 32px;
+}
+
+.dm-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px 20px;
+  background: linear-gradient(to top, var(--md-sys-color-surface) 70%, transparent);
+}
+
+.dm-nav {
+  position: relative;
+  z-index: 3;
+}
+
+::selection {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* ---------- Layout helpers ---------- */
+.dm-stack-4,
+.dm-stack-8,
+.dm-stack-12,
+.dm-stack-16 {
+  display: flex;
+  flex-direction: column;
+}
+.dm-stack-4 {
+  gap: 4px;
+}
+.dm-stack-8 {
+  gap: 8px;
+}
+.dm-stack-12 {
+  gap: 12px;
+}
+.dm-stack-16 {
+  gap: 16px;
+}
+
+.dm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dm-split {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dm-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dm-muted {
+  color: var(--md-sys-color-on-surface-variant);
+  margin: 0;
+}
+
+.dm-accent {
+  color: var(--md-sys-color-primary);
+}
+
+.dm-strong {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.dm-display {
+  margin: 0;
+  color: var(--md-sys-color-on-primary-container);
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+/* ---------- Section header ---------- */
+.dm-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.dm-section-title {
+  margin: 0;
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.dm-link {
+  border: none;
+  background: none;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border-radius: var(--md-sys-shape-corner-full);
+  cursor: pointer;
+  color: var(--md-sys-color-primary);
+}
+
+/* ---------- Glyph & media ---------- */
+.dm-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--md-sys-shape-corner-full);
+  flex-shrink: 0;
+}
+
+.dm-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.md-horizontal-card__media:has(.dm-media) {
+  background: none;
+}
+
+/* ---------- Meter ---------- */
+.dm-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.dm-meter--button {
+  border: none;
+  background: none;
+  padding: 8px;
+  margin: -8px;
+  width: calc(100% + 16px);
+  border-radius: var(--md-sys-shape-corner-medium);
+  cursor: pointer;
+  color: inherit;
+}
+
+.dm-meter__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dm-meter__label {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.dm-meter__value {
+  color: var(--md-sys-color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Information row ---------- */
+.dm-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 12px;
+  margin: 0 -12px;
+  width: calc(100% + 24px);
+  border: none;
+  border-radius: var(--md-sys-shape-corner-large);
+  background: transparent;
+  color: var(--md-sys-color-on-surface);
+  text-align: left;
+  transition:
+    background-color 250ms var(--md-sys-motion-easing-standard),
+    opacity 250ms linear;
+}
+
+button.dm-row {
+  cursor: pointer;
+}
+
+.dm-row--active {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.dm-row--done .dm-row__title {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.dm-row__leading {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.dm-row__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dm-row__overline {
+  color: var(--md-sys-color-primary);
+}
+
+.dm-row__title {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.dm-row--active .dm-row__title {
+  color: inherit;
+}
+
+.dm-row__detail {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.dm-row__trailing {
+  flex-shrink: 0;
+  color: var(--md-sys-color-on-surface);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Empty state ---------- */
+.dm-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 32px 16px;
+}
+
+.dm-empty__icon {
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  margin-bottom: 8px;
+}
+
+/* ---------- Tonal chip-like badge ("AI draft") ---------- */
+.dm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 16px 0 8px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dm-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.dm-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dm-card-list .md-horizontal-card__title {
+  color: var(--md-sys-color-on-surface);
+}
+
+.dm-card-list .md-horizontal-card__subhead {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* skeleton shimmer for AI generation */
+.dm-skeleton {
+  border-radius: var(--md-sys-shape-corner-medium);
+  background: linear-gradient(
+    100deg,
+    var(--md-sys-color-surface-container-high) 30%,
+    var(--md-sys-color-surface-container-highest) 50%,
+    var(--md-sys-color-surface-container-high) 70%
+  );
+  background-size: 300% 100%;
+  animation: dm-shimmer 1.4s linear infinite;
+}
+
+@keyframes dm-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-skeleton {
+    animation: none;
+  }
+}
+
+/* ---------- Session card ---------- */
+.dm-session-card__open {
+  border: none;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--md-sys-shape-corner-medium) 0 0 var(--md-sys-shape-corner-medium);
+  font: inherit;
+}
+
+.dm-session-card__media {
+  display: flex;
+}
+
+.dm-session-card__start {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.dm-session-card__play {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--md-sys-shape-corner-large);
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  box-shadow: var(--md-sys-elevation-level1);
+  transition:
+    border-radius 300ms var(--md-sys-motion-easing-expressive),
+    transform 200ms var(--md-sys-motion-easing-expressive);
+}
+
+.dm-session-card__start:hover .dm-session-card__play {
+  border-radius: var(--md-sys-shape-corner-full);
+  transform: scale(1.06);
+}
+
+.dm-fab-anchor {
+  position: absolute;
+  right: 16px;
+  bottom: 96px;
+  z-index: 4;
+}
+
+.dm-fab-anchor--no-nav {
+  bottom: 16px;
+}
+
+.dm-body:has(> .dm-fab-anchor) {
+  padding-bottom: 96px;
+}
+
+.dm-avatar-button {
+  display: inline-flex;
+  padding: 4px;
+  margin-left: 4px;
+  border: none;
+  background: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  cursor: pointer;
+}
+
+/* Headlines receive programmatic focus for announcements; no ring for that. */
+.md-top-app-bar__headline:focus {
+  outline: none;
+}

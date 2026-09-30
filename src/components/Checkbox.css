@@ -1,0 +1,91 @@
+/* 18px box inside a 40px circular touch target, per the kit. */
+.md-checkbox {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--md-sys-shape-corner-full);
+  --md-checkbox-color: var(--md-sys-color-primary);
+}
+
+.md-checkbox--error {
+  --md-checkbox-color: var(--md-sys-color-error);
+}
+
+.md-checkbox__input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.md-checkbox__box {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid var(--md-sys-color-on-surface-variant);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--md-sys-color-on-primary);
+  transition: background-color 100ms linear, border-color 100ms linear;
+}
+
+.md-checkbox--error .md-checkbox__box {
+  border-color: var(--md-sys-color-error);
+}
+
+.md-checkbox__input:is(:checked, :indeterminate) + .md-checkbox__box {
+  background: var(--md-checkbox-color);
+  border-color: var(--md-checkbox-color);
+}
+
+.md-checkbox--error .md-checkbox__input:is(:checked, :indeterminate) + .md-checkbox__box {
+  color: var(--md-sys-color-on-error);
+}
+
+/* state layer on the round target */
+.md-checkbox::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--md-sys-color-on-surface);
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+.md-checkbox:has(:checked, :indeterminate)::before {
+  background: var(--md-checkbox-color);
+}
+.md-checkbox:hover::before {
+  opacity: var(--md-sys-state-hover-opacity);
+}
+.md-checkbox:has(:focus-visible)::before {
+  opacity: var(--md-sys-state-focus-opacity);
+}
+.md-checkbox:has(:focus-visible) {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: -2px;
+}
+
+.md-checkbox:has(:disabled) {
+  opacity: 0.38;
+}
+.md-checkbox:has(:disabled) .md-checkbox__input {
+  cursor: default;
+}
+
+.md-checkbox__glyph {
+  animation: md-check-in 200ms var(--md-sys-motion-easing-expressive) both;
+}
+@keyframes md-check-in {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}

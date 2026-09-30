@@ -1,0 +1,48 @@
+.md-linear-progress {
+  width: 100%;
+  display: block;
+}
+
+.md-linear-progress svg,
+.md-circular-progress svg {
+  display: block;
+  overflow: visible;
+}
+
+.md-progress__active,
+.md-progress__track {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.md-progress__active {
+  stroke: var(--md-sys-color-primary);
+}
+
+.md-progress__track {
+  stroke: var(--md-sys-color-secondary-container);
+}
+
+.md-progress__stop {
+  fill: var(--md-sys-color-primary);
+}
+
+.md-circular-progress {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.md-circular-progress {
+  position: relative;
+}
+
+.md-circular-progress__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
